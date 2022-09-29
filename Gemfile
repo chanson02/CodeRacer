@@ -34,6 +34,7 @@ gem 'jbuilder'
 
 # Haml for easy HTML writing
 gem 'haml-rails'
+gem 'html2haml'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 
