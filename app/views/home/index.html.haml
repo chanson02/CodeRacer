@@ -1,3 +1,13 @@
 %h1 Home#index
-%p Find me in app/views/home/index.html.haml
+
 =render 'user/session_manager'
+- if current_user
+  %p
+    Welcome to the Rails App,
+    =current_user.name
+
+%h3 Other Users
+%ul
+  - (current_user ? User.where.not(id: current_user.id) : User.all).each do |u|
+    %li
+      =u.name
